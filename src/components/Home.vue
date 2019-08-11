@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="top-wrapper" style="background-image: url('../../static/img/keyboard-2308477_1920.jpg');">
+    <div class="top-wrapper" style="background-image: url('static/img/keyboard-2308477_1920.jpg');">
       <div class="container">
         <h1>{{ title }}</h1>
         <p>{{ msg }}</p>
