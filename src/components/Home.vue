@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="top-wrapper">
+    <div class="top-wrapper" style="background-image: url('../../static/img/keyboard-2308477_1920.jpg');">
       <div class="container">
         <h1>{{ title }}</h1>
         <p>{{ msg }}</p>
@@ -132,7 +132,6 @@ header {
 }
 .top-wrapper {
   padding: 100px 0 50px 0;
-  background-image: url("../assets/keyboard-2308477_1920.jpg");
   background-size: cover;
   color: white;
   border-bottom: 2px solid #dee7ec;
