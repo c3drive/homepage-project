@@ -50,7 +50,13 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../docs'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '',
+    /*
+    assetsPublicPath: '', // 相対パス（css-img:static/img/, html-img:../assets/）
+     */
+    assetsPublicPath: '/homepage-project/docs/',　// gh-pagesリリース時パス（css-img:../assets/, html-img:../assets/）
+    /*
+    assetsPublicPath: '/homepage-project/', // masterリリース時パス（css-img:../assets/, html-img:../assets/）
+     */
 
     /**
      * Source Maps
