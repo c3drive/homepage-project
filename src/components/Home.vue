@@ -6,48 +6,7 @@
         <p>{{ msg }}</p>
       </div>
       <div class="container">
-        <div class="items">
-          <div class="item">
-            <a
-              href="#"
-              target="_blank"
-              class="btn"
-            >
-            <span class="fas fa-images"></span>
-              Work
-            </a>
-          </div>
-          <div class="item">
-            <a
-              href="#"
-              target="_blank"
-              class="btn"
-            >
-            <span class="fas fa-list-ul"></span>
-              Skill
-            </a>
-          </div>
-          <div class="item">
-            <a
-              href="#"
-              target="_blank"
-              class="btn"
-            >
-            <span class="fas fa-user"></span>
-              About
-            </a>
-          </div>
-          <div class="item">
-            <a
-              href="#"
-              target="_blank"
-              class="btn"
-            >
-            <span class="fas fa-envelope"></span>
-            Contact
-            </a>
-          </div>
-        </div>
+        <items-component></items-component>
       </div>
     </div>
     <div class="container">
@@ -82,7 +41,11 @@
 </template>
 
 <script>
+import Items from '@/components/Items'
 export default {
+  components: {
+    'items-component': Items
+  },
   name: 'Home',
   data () {
     return {
@@ -161,24 +124,5 @@ header {
 }
 .github {
   background-color: #24292D;
-}
-.items {
-  padding: 10px 0;
-}
-.item {
-  display: inline-block;
-  width: 20%;
-  margin: 0 0.5%;
-  opacity: 0.8;
-  border-radius: 4px;
-  transition: all 1s;
-  border: 1px solid #dee7ec;
-  background-color:rgba(0, 0, 0, 0.3);
-}
-.item:hover {
-  background-color:rgba(255, 255, 255, 0.3);
-}
-.item a {
-  display: block;
 }
 </style>
