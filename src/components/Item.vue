@@ -1,15 +1,15 @@
 <template>
   <div class="item">
-    <a
-        href="#"
-        target="_blank"
+    <router-link
+        v-bind:to="this.link"
+        target="_self"
         class="btn"
     >
         <span
             v-bind:class="this.icon"
         ></span>
         {{ this.title }}
-    </a>
+    </router-link>
   </div>
 </template>
 
@@ -17,8 +17,9 @@
 export default {
   name: 'Item',
   props: [
-    'icons',
-    'title'
+    'icon',
+    'title',
+    'link'
   ]
 }
 </script>

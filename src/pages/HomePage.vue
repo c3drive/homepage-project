@@ -6,52 +6,43 @@
         <p>{{ msg }}</p>
       </div>
       <div class="container">
-        <items-component></items-component>
+        <div class="items">
+          <item-component
+              v-for="post in posts"
+              v-bind:key="post.id"
+              v-bind:icon="post.icon"
+              v-bind:title="post.title"
+              v-bind:link="post.link"
+          ></item-component>
+        </div>
       </div>
     </div>
-    <div class="container">
-      <h2>Contact</h2>
-      <ul>
-        <li>
-          {{ mail }}
-        </li>
-        <li>
-          <a
-            href="https://twitter.com/c3drive"
-            target="_blank"
-            class="btn twitter"
-          >
-          <span class="fab fa-twitter"></span>
-          twitter
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/c3drive"
-            target="_blank"
-            class="btn github"
-          >
-          <span class="fab fa-github-alt"></span>
-          GitHub
-          </a>
-        </li>
-      </ul>
-    </div>
+    <work-page id='work' class=container></work-page>
+    <contact-page id='contact' class=container></contact-page>
   </div>
 </template>
 
 <script>
-import Items from '@/components/Items'
+import Item from '@/components/Item'
+import ContactPage from '@/pages/ContactPage'
+import WorkPage from '@/pages/WorkPage'
 export default {
   components: {
-    'items-component': Items
+    'item-component': Item,
+    'work-page': WorkPage,
+    'contact-page': ContactPage
   },
   name: 'Home',
   data () {
     return {
       title: 'Yuko Kanai\'s portfolio',
       msg: 'wellcome',
-      mail: 'c3drive@gmail.com'
+      posts: [
+        {id: 1, title: 'Work', link: '/work', icon: 'fas fa-images'},
+        {id: 2, title: 'Skill', link: '/skill', icon: 'fas fa-list-ul'},
+        {id: 3, title: 'About', link: '/about', icon: 'fas fa-user'},
+        {id: 4, title: 'Contact', link: '/contact', icon: 'fas fa-envelope'}
+      ]
     }
   }
 }
@@ -108,21 +99,7 @@ header {
 .top-wrapper p {
   opacity:0.8;
 }
-.btn {
-  padding: 8px 20px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 4px;
-  transition: all 1s;
-}
-.btn:hover {
-  opacity: 1;
-}
-.twitter {
-  background-color: #55acee;
-}
-.github {
-  background-color: #24292D;
+.items {
+  padding: 10px 0;
 }
 </style>
