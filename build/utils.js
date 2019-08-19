@@ -19,7 +19,7 @@ exports.cssLoaders = function (options) {
     loader: 'css-loader',
     options: {
       sourceMap: options.sourceMap,
-      url: true //urlを変換しない
+      url: true //urlを変換する
     }
   }
 
