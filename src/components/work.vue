@@ -15,13 +15,22 @@
           </li>
           <li>
               <p class="left-field">ソースコード</p>
-              <p class="right-field">
+              <p
+                v-if="this.giturl.length"
+                class="right-field"
+              >
                   <a
                     v-bind:href="this.giturl"
                     target="_blank"
                   >
                   {{ this.giturl }}
                   </a>
+              </p>
+              <p
+                v-else
+                class="right-field"
+              >
+                ソースコードは有りません。
               </p>
           </li>
           <li>
@@ -37,6 +46,7 @@
               </p>
           </li>
         </ul>
+        <br>
   </div>
 </template>
 
