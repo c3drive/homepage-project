@@ -1,7 +1,7 @@
 <template>
   <div class="work">
       <h3>{{ this.title}}</h3>
-      <ul>
+      <ul class="worklist">
           <li>
               <p class="left-field">URL</p>
               <p class="right-field">
@@ -97,13 +97,14 @@ a {
 .work {
     width:70%;
     margin: 0 auto;
+    padding: 10px;
 }
 li .left-field {
     float: left;
-    width: 40%;
+    width: 30%;
 }
 li .right-field {
     float: right;
-    width: 60%;
+    width: 70%;
 }
 </style>
