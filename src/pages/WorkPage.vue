@@ -2,24 +2,26 @@
   <div>
     <h2>Work</h2>
     <p>{{ msg }}</p>
-      <router-link
-        v-for="post in posts"
-        v-bind:key="post.id"
-        v-bind:to="post.title"
-        target="_self"
-        class="btn"
-      >
-          {{ post.title}}
-      </router-link>
-    <work-component
-        v-for="post in posts"
-        v-bind:key="post.id"
-        v-bind:title="post.title"
-        v-bind:url="post.url"
-        v-bind:giturl="post.giturl"
-        v-bind:description="post.description"
-        v-bind:technology="post.technology"
-    ></work-component>
+    <router-link
+      v-for="post in posts"
+      v-bind:key="post.id"
+      v-bind:to="post.title"
+      target="_self"
+      class="btn"
+    >
+        {{ post.title}}
+    </router-link>
+    <div class="workarea">
+      <work-component
+          v-for="post in posts"
+          v-bind:key="post.id"
+          v-bind:title="post.title"
+          v-bind:url="post.url"
+          v-bind:giturl="post.giturl"
+          v-bind:description="post.description"
+          v-bind:technology="post.technology"
+      ></work-component>
+    </div>
   </div>
 </template>
 
@@ -75,11 +77,7 @@ a {
 .btn:hover {
   opacity: 1;
 }
-.twitter {
-  background-color: #55acee;
+.workarea {
+    background-color: #b0c4de;
 }
-.github {
-  background-color: #24292D;
-}
-
 </style>
