@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h2>Contact</h2>
-    <p>{{ msg }}</p>
+    <h1 class="section-index">Contact</h1>
+    <p class="msg">{{ msg }}</p>
     <ul>
     <li>
         {{ mail }}
@@ -46,42 +46,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h2::after {
-  content: "";
-  display: block;
-  height: 1px;
-  width: 30%;
-  background-color: #ccc;
-  margin: auto;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 5px 8px;
-}
-a {
-  color: white;
-  text-decoration: none;
-}
-.btn {
-  padding: 8px 20px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 4px;
-  transition: all 1s;
-}
-.btn:hover {
-  opacity: 1;
-}
 .twitter {
   background-color: #55acee;
 }
 .github {
   background-color: #24292D;
 }
-
 </style>

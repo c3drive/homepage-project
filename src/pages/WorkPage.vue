@@ -1,16 +1,7 @@
 <template>
   <div>
-    <h2>Work</h2>
-    <p>{{ msg }}</p>
-    <router-link
-      v-for="post in posts"
-      v-bind:key="post.id"
-      v-bind:to="post.title"
-      target="_self"
-      class="btn"
-    >
-        {{ post.title}}
-    </router-link>
+    <h1 class="section-index">Work</h1>
+    <p class="msg">{{ msg }}</p>
     <div class="workarea">
       <work-component
           v-for="post in posts"
@@ -45,39 +36,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h2::after {
-  content: "";
-  display: block;
-  height: 1px;
-  width: 30%;
-  background-color: #ccc;
-  margin: auto;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 5px 8px;
-}
-a {
-  color: white;
-  text-decoration: none;
-}
-.btn {
-  padding: 8px 20px;
-  color: black;
-  display: inline-block;
-  opacity: 0.8;
-  border: solid #24292D 1px;
-  border-radius: 4px;
-  transition: all 1s;
-}
-.btn:hover {
-  opacity: 1;
-}
-.workarea {
-    background-color: #b0c4de;
-}
 </style>
