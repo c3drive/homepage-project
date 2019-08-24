@@ -17,19 +17,25 @@
         </div>
       </div>
     </div>
-    <work-page id='work' class=container></work-page>
-    <contact-page id='contact' class=container></contact-page>
+    <about-page id='about' class='section'></about-page>
+    <work-page id='work' class='section'></work-page>
+    <skill-page id='skill' class='section'></skill-page>
+    <contact-page id='contact' class='section'></contact-page>
   </div>
 </template>
 
 <script>
 import Item from '@/components/Item'
-import ContactPage from '@/pages/ContactPage'
+import AboutPage from '@/pages/AboutPage'
 import WorkPage from '@/pages/WorkPage'
+import SkillPage from '@/pages/SkillPage'
+import ContactPage from '@/pages/ContactPage'
 export default {
   components: {
     'item-component': Item,
+    'about-page': AboutPage,
     'work-page': WorkPage,
+    'skill-page': SkillPage,
     'contact-page': ContactPage
   },
   name: 'Home',
@@ -38,9 +44,9 @@ export default {
       title: 'Yuko Kanai\'s portfolio',
       msg: 'wellcome',
       posts: [
-        {id: 1, title: 'Work', link: '/work', icon: 'fas fa-images'},
-        {id: 2, title: 'Skill', link: '/skill', icon: 'fas fa-list-ul'},
-        {id: 3, title: 'About', link: '/about', icon: 'fas fa-user'},
+        {id: 1, title: 'About', link: '#about', icon: 'fas fa-user'},
+        {id: 2, title: 'Work', link: '/work', icon: 'fas fa-images'},
+        {id: 3, title: 'Skill', link: '/skill', icon: 'fas fa-list-ul'},
         {id: 4, title: 'Contact', link: '/contact', icon: 'fas fa-envelope'}
       ]
     }
@@ -53,36 +59,13 @@ export default {
 h1 {
   font-weight: normal;
   font-size: 60px;
-}
-h2::after {
-  content: "";
-  display: block;
-  height: 1px;
-  width: 30%;
-  background-color: #ccc;
-  margin: auto;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 5px 8px;
-}
-a {
-  color: white;
-  text-decoration: none;
+  margin-bottom: 10px;
 }
 header {
   height: 58px;
   width: 100%;
   background-color: rgba(14, 21, 22, 0.9);
   z-index: 1;
-}
-.container {
-  padding: 0 15px;
-  margin:0 auto;
 }
 .top-wrapper {
   padding: 100px 0 50px 0;
@@ -101,5 +84,16 @@ header {
 }
 .items {
   padding: 10px 0;
+}
+.section {
+    width:70%;
+    margin: 0 auto;
+    padding: 10px;
+    border: solid #b0c4de 0px;
+}
+.section::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 </style>
