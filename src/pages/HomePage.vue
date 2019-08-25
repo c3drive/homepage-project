@@ -7,13 +7,17 @@
       </div>
       <div class="container">
         <div class="items">
-          <item-component
-              v-for="post in posts"
-              v-bind:key="post.id"
-              v-bind:icon="post.icon"
-              v-bind:title="post.title"
-              v-bind:link="post.link"
-          ></item-component>
+          <router-link
+            v-for="section in sections"
+            v-bind:key="section.id"
+            v-bind:to="section.link"
+            class="btn item"
+          >
+            <p class="caption">
+              <span v-bind:class="section.icon"></span>
+              {{ section.title }}
+            </p>
+          </router-link>
         </div>
       </div>
     </div>
@@ -43,8 +47,8 @@ export default {
     return {
       title: 'Yuko Kanai\'s portfolio',
       msg: 'wellcome',
-      posts: [
-        {id: 1, title: 'About', link: '#about', icon: 'fas fa-user'},
+      sections: [
+        {id: 1, title: 'About', link: '/about', icon: 'fas fa-user'},
         {id: 2, title: 'Work', link: '/work', icon: 'fas fa-images'},
         {id: 3, title: 'Skill', link: '/skill', icon: 'fas fa-list-ul'},
         {id: 4, title: 'Contact', link: '/contact', icon: 'fas fa-envelope'}
@@ -84,6 +88,15 @@ header {
 }
 .items {
   padding: 10px 0;
+}
+.item {
+  width: 15%;
+  margin: 10px;
+  border: 1px solid #dee7ec;
+  background-color:rgba(0, 0, 0, 0.3);
+}
+.item:hover {
+  background-color:rgba(255, 255, 255, 0.3);
 }
 .section {
     width:70%;
