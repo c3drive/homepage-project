@@ -1,68 +1,71 @@
 <template>
-<div class="container">
-  <a
-    v-on:click="show = !show"
-    href="#!"
-    class="btn workindex"
-  >
-      {{ this.title}}
-  </a>
-  <transition
-    v-if="show"
-    name="slide-fade"
-  >
-    <div class="work">
+  <div class="container">
+    <a
+      v-on:click="show = !show"
+      href="#!"
+      class="btn workindex"
+    >
+        {{ this.title}}
+    </a>
+    <transition
+      v-if="show"
+      name="slide-fade"
+    >
+      <div class="work">
         <h3>{{ this.title}}</h3>
         <ul>
-            <li>
-                <p class="left-field">URL</p>
-                <p class="right-field">
-                    <a
-                      v-bind:href="this.url"
-                      target="_blank"
-                    >
-                    {{ this.url }}
-                    </a>
-                </p>
-            </li>
-            <li>
-                <p class="left-field">ソースコード</p>
-                <p
-                  v-if="this.giturl.length"
-                  class="right-field"
-                >
-                    <a
-                      v-bind:href="this.giturl"
-                      target="_blank"
-                    >
-                    {{ this.giturl }}
-                    </a>
-                </p>
-                <p
-                  v-else
-                  class="right-field"
-                >
-                  ソースコードは有りません。
-                </p>
-            </li>
-            <li>
-                <p class="left-field">説明</p>
-                <p class="right-field">
-                    {{ this.description }}
-                </p>
-            </li>
-            <li>
-                <p class="left-field">使用した主な技術・ツール</p>
-                <p class="right-field">
-                    {{ this.technology }}
-                </p>
-            </li>
-          </ul>
-          <br>
-    </div>
-  </transition>
-  <br>
-</div>
+          <li>
+            <div class="left-field">
+              <p class="caption">URL</p>
+            </div>
+            <div class="right-field">
+              <a
+                class="text"
+                v-bind:href="this.url"
+                target="_blank"
+              >
+                {{ this.url }}
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="left-field">
+              <p class="caption">ソースコード</p>
+            </div>
+            <div class="right-field">
+              <a
+                class="text"
+                v-if="this.giturl.length"
+                v-bind:href="this.giturl"
+                target="_blank"
+              >
+                {{ this.giturl }}
+              </a>
+              <p class="text" v-else>ソースコードは有りません。</p>
+            </div>
+          </li>
+          <li>
+            <div class="left-field">
+              <p class="caption">説明</p>
+            </div>
+            <div class="right-field">
+              <p class="text">{{ this.description }}</p>
+            </div>
+          </li>
+          <li>
+            <div class="left-field">
+              <p class="caption">使用した主な技術・ツール</p>
+            </div>
+            <div class="right-field">
+              <p class="text">{{ this.technology }}</p>
+            </div>
+          </li>
+        </ul>
+        <br>
+      </div>
+    </transition>
+    <br>
+  </div>
 </template>
 
 <script>

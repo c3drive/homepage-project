@@ -18,6 +18,16 @@
     </li>
     <li>
         <a
+        v-bind:href="this.facebook"
+        target="_blank"
+        class="btn facebook"
+        >
+        <span class="fab fa-facebook"></span>
+        facebook
+        </a>
+    </li>
+    <li>
+        <a
         v-bind:href="this.github"
         target="_blank"
         class="btn github"
@@ -34,9 +44,10 @@
 export default {
   data () {
     return {
-      msg: 'SNSかメールでお気軽にご連絡ください',
+      msg: '転職活動中です。SNSかメールでお気軽にご連絡ください',
       mail: 'c3drive@gmail.com',
       twitter: 'https://twitter.com/c3drive',
+      facebook: 'https://www.facebook.com/yuko.kanai.77',
       github: 'https://github.com/c3drive'
     }
   }
@@ -48,6 +59,9 @@ export default {
 <style scoped>
 .twitter {
   background-color: #55acee;
+}
+.facebook {
+  background-color: #1D3C78;
 }
 .github {
   background-color: #24292D;

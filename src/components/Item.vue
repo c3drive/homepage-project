@@ -1,14 +1,14 @@
 <template>
   <div class="item">
     <router-link
-        v-bind:to="this.link"
-        target="_self"
-        class="btn"
+      v-bind:to="this.link"
+      target="_self"
+      class="btn"
     >
-        <span
-            v-bind:class="this.icon"
-        ></span>
+      <p class="caption">
+        <span v-bind:class="this.icon"></span>
         {{ this.title }}
+      </p>
     </router-link>
   </div>
 </template>
