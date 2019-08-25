@@ -72,11 +72,7 @@
 </template>
 
 <script>
-import vueAccordion from 'vue-accordion'
 export default {
-  components: {
-    'vue-accordion': vueAccordion
-  },
   name: 'Work',
   props: [
     'title',

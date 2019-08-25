@@ -11,6 +11,7 @@
             v-for="section in sections"
             v-bind:key="section.id"
             v-bind:to="section.link"
+            v-smooth-scroll="{ duration: 1000, offset: -50 }"
             class="btn item"
           >
             <p class="caption">
@@ -48,7 +49,7 @@ export default {
       title: 'Yuko Kanai\'s portfolio',
       msg: 'wellcome',
       sections: [
-        {id: 1, title: 'About', link: '/about', icon: 'fas fa-user'},
+        {id: 1, title: 'About', link: '#about', icon: 'fas fa-user'},
         {id: 2, title: 'Work', link: '/work', icon: 'fas fa-images'},
         {id: 3, title: 'Skill', link: '/skill', icon: 'fas fa-list-ul'},
         {id: 4, title: 'Contact', link: '/contact', icon: 'fas fa-envelope'}
