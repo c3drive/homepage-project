@@ -10,6 +10,7 @@ import Contact from '@/pages/ContactPage'
 Vue.use(Router)
 
 export default new Router({
+  // mode: 'history', //１GitHubPagesで画面が出ないためコメントアウトする
   routes: [
     // {
     // path: '/',
