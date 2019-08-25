@@ -4,7 +4,30 @@
     <p class="msg">{{ msg }}</p>
     <div class="container">
       <div class="left-field">
-        <img src="../assets/icon.jpeg">
+        <img
+          src="@/assets/icon.jpeg"
+          class="myicon"
+        />
+        <a
+        v-bind:href="this.github"
+        target="_blank"
+        class="btn tips"
+        >
+        <img
+          src="@/assets/GitHub-Mark-120px-plus.png"
+          class="icon"
+        />
+        </a>
+        <a
+        v-bind:href="this.qiita"
+        target="_blank"
+        class="btn tips"
+        >
+        <img
+          src="@/assets/qiita-square.png"
+          class="icon"
+        />
+        </a>
       </div>
       <div class="right-field">
         <ul class="items">
@@ -26,6 +49,8 @@ export default {
   data () {
     return {
       msg: '東京在住。転職活動中。趣味は、筋トレと効率化と勉強',
+      github: 'https://github.com/c3drive',
+      qiita: 'https://qiita.com/c3drive',
       profiles: [
         {id: 1, title: '2006年04月：ポイントシステム開発', description: '主にJavaでの開発。オブジェクト指向の概念が大好きに。'},
         {id: 2, title: '2010年05月：Webシステム開発', description: '主にPHPでフロントからバックエンドまで開発。要件定義からインフラ構築まで一通り関われ気づけば6年ほどいました。'},
@@ -44,10 +69,17 @@ li {
   text-align: left;
   margin-bottom: 10px;
 }
-img {
+.myicon {
   border-radius: 50%;
   width: 180px;
   margin: 16px;
+}
+.tips{
+  margin: 5px;
+  border: 0px;
+}
+.icon {
+  height: 40px;
 }
 .caption {
   font-size: 1.1em;
@@ -56,4 +88,5 @@ img {
 .text {
   font-size: 1em;
 }
+
 </style>

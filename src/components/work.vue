@@ -1,16 +1,18 @@
 <template>
   <div class="container">
     <a
-      v-on:click="show = !show"
+      v-on:click.prevent="show = !show"
       href="#!"
       class="btn workindex"
     >
         {{ this.title}}
     </a>
-    <transition
-      v-if="show"
-      name="slide-fade"
-    >
+    <br>
+    <transition>
+      <div
+        v-show="show"
+        name="slide-fade"
+      >
       <div class="work">
         <h3>{{ this.title}}</h3>
         <ul>
@@ -62,6 +64,7 @@
           </li>
         </ul>
         <br>
+      </div>
       </div>
     </transition>
     <br>

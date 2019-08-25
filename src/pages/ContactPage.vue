@@ -42,16 +42,6 @@
         </a>
         <div class="li-footer"></div>
       </li>
-      <li>
-        <a
-        v-bind:href="this.github"
-        target="_blank"
-        class="btn github"
-        >
-        <span class="fab fa-github-alt"></span>
-        GitHub
-        </a>
-      </li>
     </ul>
   </div>
 </template>
@@ -64,8 +54,7 @@ export default {
       mail: 'c3drive@gmail.com',
       twitter: 'https://twitter.com/c3drive',
       facebook: 'https://www.facebook.com/yuko.kanai.77',
-      wantedly: 'https://www.wantedly.com/users/100164209',
-      github: 'https://github.com/c3drive'
+      wantedly: 'https://www.wantedly.com/users/100164209'
     }
   }
 }
@@ -80,15 +69,10 @@ export default {
 .facebook {
   background-color: #1D3C78;
 }
-.github {
-  background-color: #24292D;
-}
 .icon {
   display: inline-block;
   padding: 1px;
   height: 18px;
   vertical-align: bottom;
-}
-.wantedly {
 }
 </style>
