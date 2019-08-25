@@ -18,7 +18,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Vollkorn', 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', 'Noto Sans JP', 'Vollkorn', 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -84,5 +84,12 @@ a {
     padding: 5px;
     float: right;
     width: 65%;
+}
+.caption {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.text {
+  font-size: 0.9em;
 }
 </style>
