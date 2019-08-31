@@ -7,17 +7,18 @@
       </div>
       <div class="container">
         <div class="items">
-          <router-link
+          <a
             v-for="section in sections"
             v-bind:key="section.id"
-            v-bind:to="section.link"
+            href="#"
+            @click="doSmoothScroll(section.link)"
             class="btn item"
           >
             <p class="caption">
               <span v-bind:class="section.icon"></span>
               {{ section.title }}
             </p>
-          </router-link>
+          </a>
         </div>
       </div>
     </div>
@@ -42,16 +43,21 @@ export default {
     'skill-page': SkillPage,
     'contact-page': ContactPage
   },
+  methods: {
+    doSmoothScroll (id) {
+      this.$SmoothScroll(document.getElementById(id), 1000, null, null, 'y')
+    }
+  },
   name: 'Home',
   data () {
     return {
       title: 'Yuko Kanai\'s portfolio',
       msg: 'wellcome',
       sections: [
-        {id: 1, title: 'About', link: '/about', icon: 'fas fa-user'},
-        {id: 2, title: 'Work', link: '/work', icon: 'fas fa-images'},
-        {id: 3, title: 'Skill', link: '/skill', icon: 'fas fa-list-ul'},
-        {id: 4, title: 'Contact', link: '/contact', icon: 'fas fa-envelope'}
+        {id: 1, title: 'About', link: 'about', icon: 'fas fa-user'},
+        {id: 2, title: 'Work', link: 'work', icon: 'fas fa-images'},
+        {id: 3, title: 'Skill', link: 'skill', icon: 'fas fa-list-ul'},
+        {id: 4, title: 'Contact', link: 'contact', icon: 'fas fa-envelope'}
       ]
     }
   }

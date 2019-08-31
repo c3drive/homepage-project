@@ -70,9 +70,10 @@ li {
   margin-bottom: 10px;
 }
 .myicon {
+  display: block;
   border-radius: 50%;
   width: 180px;
-  margin: 16px;
+  margin: 10px auto;
 }
 .tips{
   margin: 5px;

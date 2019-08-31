@@ -69,7 +69,7 @@ li {
   clear: both;
 }
 .icon {
-  height: 50px;
+  height: 40px;
   margin: 0 5px;
 }
 </style>
