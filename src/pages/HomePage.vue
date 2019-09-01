@@ -11,7 +11,7 @@
             v-for="section in sections"
             v-bind:key="section.id"
             href="#"
-            @click="doSmoothScroll(section.link)"
+            v-on:click="doSmoothScroll(section.link)"
             class="btn item"
           >
             <p class="caption">
