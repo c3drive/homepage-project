@@ -11,7 +11,7 @@
         <a
         v-bind:href="this.github"
         target="_blank"
-        class="btn tips"
+        class="tips"
         >
         <img
           src="@/assets/GitHub-Mark-120px-plus.png"
@@ -21,7 +21,7 @@
         <a
         v-bind:href="this.qiita"
         target="_blank"
-        class="btn tips"
+        class="tips"
         >
         <img
           src="@/assets/qiita-square.png"
@@ -72,7 +72,7 @@ li {
 .myicon {
   display: block;
   border-radius: 50%;
-  width: 180px;
+  width: 90%;
   margin: 10px auto;
 }
 .tips{
