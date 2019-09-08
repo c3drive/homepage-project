@@ -72,7 +72,7 @@ li {
 .myicon {
   display: block;
   border-radius: 50%;
-  width: 180px;
+  width: 90%;
   margin: 10px auto;
 }
 .tips{
