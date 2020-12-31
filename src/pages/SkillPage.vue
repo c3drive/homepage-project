@@ -37,7 +37,7 @@
 export default {
   data () {
     return {
-      msg: '立ち上がりはやいです',
+      msg: '勝手に勉強します。立ち上がりはやいです',
       profiles: [
         {id: 1, title: 'PHP', icon1: require('@/assets/php.svg'), icon2: require('@/assets/cakephp.svg'), description: 'クラス設計から可能。Web、API、バッチ開発可能。'},
         {id: 2, title: 'Java', icon1: require('@/assets/java.svg'), description: 'Strutsベースでの開発、JavaEE、Servletなど経験、環境構築からの経験なし。'},
